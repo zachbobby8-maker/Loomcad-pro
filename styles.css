@@ -1,0 +1,52 @@
+/* Futuristic styling */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+}
+
+input::placeholder {
+  color: rgba(8, 145, 178, 0.5); /* cyan-600 with opacity */
+}
+
+/* Custom Scrollbar for console if needed */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.3);
+  border-radius: 10px;
+}
+
+/* Waveform Animation */
+.wave-bar {
+  border-radius: 1px;
+  animation: wave 1s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1.5); }
+}
+
+/* Console Typing Animation simulation */
+.type-anim {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 3D Canvas Glow */
+#canvas-container canvas {
+  filter: drop-shadow(0 0 40px rgba(34, 211, 238, 0.1));
+}
